@@ -1,6 +1,6 @@
 # Project8
 
-dotnet user-secrets init
+az login
 
 dotnet user-secrets set "AiAgentService" "<Project connection string>" --project "<CSPROJ file path>"
 
