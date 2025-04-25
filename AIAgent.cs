@@ -7,7 +7,7 @@ namespace Project8.Client;
 
 public abstract class AIAgent(AIProjectClient client, string modelName) : IAsyncDisposable
 {
-    protected static readonly string SharedPath = Path.Combine(Environment.CurrentDirectory, "..", "..", "..");
+    protected static readonly string SharedPath = Path.Combine(Environment.CurrentDirectory);
     //protected readonly SalesData SalesData = new(SharedPath);
     protected AIProjectClient Client { get; } = client;
     protected string ModelName { get; } = modelName;
