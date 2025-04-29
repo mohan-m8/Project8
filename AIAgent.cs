@@ -155,13 +155,13 @@ public abstract class AIAgent(AIProjectClient client, string modelName) : IAsync
             while (runResponse.Value.Status == RunStatus.Queued
                 || runResponse.Value.Status == RunStatus.InProgress);
 
-            Response<PageableList<ThreadMessage>> messagesResponse = await aiclient.GetMessagesAsync(thread.Id);
+            Response<PageableList<ThreadMessage>> messagesResponse = await aiclient.GetMessagesAsync(thread.Id,runResponse.Value.Id,1);
             IReadOnlyList<ThreadMessage> messages = messagesResponse.Value.Data;
 
             // Display messages
             foreach (ThreadMessage threadMessage in messages)
             {
-                Console.Write($"{threadMessage.CreatedAt:yyyy-MM-dd HH:mm:ss} - {threadMessage.Role,10}: ");
+                //Console.Write($"{threadMessage.CreatedAt:yyyy-MM-dd HH:mm:ss} - {threadMessage.Role,10}: ");
                 foreach (MessageContent contentItem in threadMessage.ContentItems)
                 {
                     if (contentItem is MessageTextContent textItem)
