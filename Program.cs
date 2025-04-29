@@ -13,6 +13,5 @@ string projectConnectionString = configuration["AiAgentService"] ?? throw new In
 
 AIProjectClient projectClient = new(projectConnectionString, new DefaultAzureCredential());
 
- await using AIAgent aIAgent = new AIAgentInstructionsRef(projectClient, apiDeploymentName);
+ await using AIAgent aIAgent = new AIAgentPDFReference(projectClient, apiDeploymentName);
  await aIAgent.RunAsync();
- await aIAgent.DisposeAsync();

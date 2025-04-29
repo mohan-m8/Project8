@@ -1,0 +1,14 @@
+[{
+    "name": "Harsha",
+    "Likes": "spicy food, Italian cuisine, quick recipes",
+    "Dislikes" : "mushrooms, olives",
+    "Allergies": "peanuts,curd, shellfish",
+    "Favorites": "pasta, paneer, dosa"
+},
+{
+    "name": "Mohan",
+    "Likes": "non spicy food, juicy recipes",
+    "Dislikes" : "jalepinos",
+    "Allergies": "sugar",
+    "Favorites": "pasta, paneer, dosa"
+}]

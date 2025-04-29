@@ -39,7 +39,8 @@
 				"ms-dotnettools.csharp",
 				"ms-azuretools.vscode-docker",
 				"ms-azuretools.vscode-azcli",
-				"ms-dotnettools.csdevkit"
+				"ms-dotnettools.csdevkit",
+				"tomoki1207.pdf"
 			]
 		}
 	}
