@@ -56,7 +56,7 @@ Would you like a script or README-style format to include this in your project d
 ## 🧠 How It Works
 
 1. ✅ User enters their name.
-2. 📄 The app looks for a file named `instructions_<username>.txt`.
+2. 📄 The app looks for a file named `userprofile.json`.
 3. 📁 If the file doesn't exist, a default template is created.
 4. 🖊️ User manually edits their preferences.
 5. 🔁 The app reloads the file on-demand (no restart needed).
