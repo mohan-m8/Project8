@@ -1,31 +1,57 @@
 # Project8
 
-az login
-
-dotnet user-secrets set "AiAgentService" "<Project connection string>" --project "<CSPROJ file path>"
-
-dotnet user-secrets set "Azure:ModelName" "gpt-4o-mini" --project "<CSPROJ file path>"
-
-dotnet add package Azure.AI.Projects
-
-dotnet add /workspaces/Project8/Project8.csproj package Azure.AI.Projects --prerelease
-
- git config --global user.name "Your Name"
-
-git config --global user.email "you@example.com"
-
-
-
-
-
-
 # 🍽️ Personalized Recipe Assistant using Azure AI
 
 ## 🚀 Project Overview
 
 This is a C# Console Application that uses **Azure OpenAI** to generate **personalized recipes** based on user-specific preferences. Instead of offering generic culinary suggestions, the app tailors every recipe strictly around the **user’s likes**, **dislikes**, **allergies**, and **favorites**, ensuring safe, enjoyable, and custom meal plans.
 
+### 🔐 **Authentication & Secrets Management**
+
+```bash
+az login
+```
+- Logs you into your Azure account via the CLI. This is needed to manage Azure resources from the command line.
+
+```bash
+dotnet user-secrets set "AiAgentService" "" --project ""
+```
+- Stores a secret (`AiAgentService`) in the *user secrets store* for a .NET project. You should fill in the project path and the value for the secret.
+- Example:  
+  `dotnet user-secrets set "AiAgentService" "my-api-key" --project "./MyApp/MyApp.csproj"`
+
+```bash
+dotnet user-secrets set "Azure:ModelName" "gpt-4o-mini" --project ""
+```
+- Sets a secret named `Azure:ModelName` to use the GPT-4o Mini model. This is typically used for configuration settings, like choosing which AI model to invoke.
+
 ---
+
+### 📦 **Package Management**
+
+```bash
+dotnet add package Azure.AI.Projects
+```
+- Adds the NuGet package `Azure.AI.Projects` to your .NET project. This package may be hypothetical or in preview.
+
+```bash
+dotnet add /workspaces/Project8/Project8.csproj package Azure.AI.Projects --prerelease
+```
+- Same as above but explicitly adds the *pre-release version* of the package to the given project.
+
+---
+
+### 🔧 **Git Configuration**
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+```
+- Configures your Git identity globally (for all projects on your system). Required for making commits and associating them with your identity.
+
+---
+
+Would you like a script or README-style format to include this in your project documentation?
 
 ## 🧠 How It Works
 
