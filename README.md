@@ -1,4 +1,4 @@
-# Project8 (Branch - PDF-reading-functionality)
+# Project8
 
 # 🍽️ Personalized Recipe Assistant using Azure AI
 
